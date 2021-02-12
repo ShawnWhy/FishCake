@@ -1,0 +1,283 @@
+.roll{
+  position:absolute;
+  top:5%;
+  left:20%;
+  display:inline-flex;
+  
+  
+}
+.cap{
+  display:inline-flex;
+  position:absolute;
+  height:100%;
+  transform:scaleX(.5);
+  float:left;
+  margin:0;
+  z-index:4;
+
+}
+.capFront{
+  position:relative;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-color: rgb(87, 108, 116);
+  z-index:3;
+  text-align: center;
+  color:lightcyan; 
+
+}
+.capDepth{
+  background-color:  rgb(68, 94, 102);
+  position:relative;
+  height:200px;
+  width:170px;
+  background-color: rgb(68, 94, 102);
+  left:-100px;
+  z-index:2;
+
+}
+.capBack{
+  position:relative;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-color:rgb(68, 94, 102);
+  left:-190px;
+  z-index:1;
+
+}
+
+.section{
+  display:inline-flex;
+  position:absolute;
+  height:100%;
+  transform:scaleX(.5);
+  float:left;
+  margin:0;
+}
+.secOne{
+  z-index:3;
+  left:120px;
+
+}
+.secTwo{
+  z-index:2;
+  left:180px;
+
+}
+.secThree{
+  z-index:1;
+  left:240px;
+
+}
+.secFour{
+  z-index:0;
+  left:300px;
+
+}
+
+.front{
+  position:relative;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-color: lightblue;
+  z-index:3;
+  /* float:left; */
+
+}
+
+.center{
+  position:relative;
+  height:200px;
+  width:100px;
+  background-color: rgb(68, 94, 102);
+  left:-100px;
+  z-index:2;
+  /* float:right; */
+}
+.back{
+  position:relative;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-color:rgb(68, 94, 102);
+  left:-200px;
+  z-index:1;
+  /* float:right; */
+
+}
+.ring{
+  position:relative;
+  height:90%;
+  width:90%;
+  border-radius:50%;
+  top:5%;
+  left:5%;
+
+}
+
+.container:{
+  width:100%;
+}
+
+.section:hover{
+  transform: translateY(30px)scaleX(.5);
+}
+
+.chosenSection{
+  animation:chosenSection .3s both;
+
+}
+
+@keyframes chosenSection{
+  0%{transform:translateY(30px)scaleX(.5);}
+  100%{transform:translateY(150px)scaleX(.5);}
+}
+
+.pole{
+  height:10px;
+  width:1000px;
+  border-radius:5px;
+  background-color:lightblue;
+  position:relative;
+  top:50%;
+  left:-950px;
+  animation:shootPole .2s both;
+  text-align: center;
+  transform-origin:right;
+
+}
+
+@keyframes shootPole{
+  0%{transform:translateX(-100%)}
+  50%{transform:translateX(0%)}
+  60%{transform:translateX(0%)rotate(-.5deg)}
+  70%{transform:translateX(0%)rotate(.5deg)}
+  80%{transform:translateX(0%)rotate(-.5deg)}
+  90%{transform:translateX(0%)rotate(.5deg)}
+  90%{transform:translateX(0%)rotate(0deg)}
+
+
+
+
+}  
+
+.flag{
+  width:90%;
+  margin:auto;
+  height:300px;
+  border-radius: 0 0 4px 4px;
+  animation:flagFall .3s both;
+  transform-origin: top;
+  background-color: lightcyan;
+}
+
+@keyframes flagFall{
+  0%{transform:scaleY(.1)}
+  100%{transform:scaleY(1)}
+}
+
+body{
+  background-color:black;
+  overflow: hidden;
+}
+
+.cap2{
+  display:inline-flex;
+  position:absolute;
+  height:100%;
+  transform:scaleX(.5);
+  left:340px;
+  margin:0;
+  z-index:-1;
+
+}
+.capFront2{
+  position:relative;
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-color:  lightblue;
+  z-index:3;
+
+}
+
+.capFront p{
+
+  position:relative;
+  top:40%;
+  transform:scaleX(2);
+  font-size: 20px;
+}
+ul{
+  position:relative;
+  left:200px;
+  width:50%;
+  top:50px;
+  transform:scaleX(2)
+}
+li{
+  border-radius:3px;
+}
+.invisibleP{
+  display:none;
+}
+
+/* li:hover{
+  background-color: lightsalmon;
+} */
+
+.veil{
+  background-color:rgba(28, 46, 45, 0.76);
+  height:100%;
+  width:100%;
+}
+
+.ripple{
+  width:.5%;
+  height:20%;
+  animation:ripple 2s both;
+  float:left;
+}
+
+@keyframes ripple{
+  0%{transform:translateY(-100%)}
+  100%{transform:translateY(550%)}
+}
+
+.underwater{
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:-2;
+}
+
+.rollButton{
+  position:fixed;
+  height:30px;
+  width:30px;
+  background-color:lightskyblue;
+  border-radius:50%;
+  bottom:5%;
+  left:5%;
+}
+
+.rollButton:hover{
+  background-color: orange;
+
+}
+
+.rollolol{
+  animation:rollolol 2s both;
+}
+
+@keyframes rollolol{
+  0%{transform:translateY(10px)scaleX(.5)}
+  50%{transform:translateY(1000px)scaleX(.5);visibility:invisible}
+  51%{transform:translateY(-400px)scaleX(.5);visibility:visible}
+  74%{transform:translateY(-400px)scaleX(.5)}
+  75%{transform:translateY(-400px)scaleX(.5)}
+  100%{transform:translateY(0)scaleX(.5)}
+}
