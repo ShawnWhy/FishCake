@@ -1,15 +1,18 @@
-var ringArray = $('.ring');
-var ringLength = ringArray.length;
-for(i=0; i<ringLength;i++){
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var j = 0; j < 6; j++) {
-        color += letters[Math.floor(Math.random() * 16)];}
-        $(ringArray[i]).css("background-color",color);
-
-
-}
-
+var ringsColor = function(){
+    var ringArray = $('.ring');
+    var ringLength = ringArray.length;
+    for(i=0; i<ringLength;i++){
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var j = 0; j < 6; j++) {
+            color += letters[Math.floor(Math.random() * 16)];}
+            $(ringArray[i]).css("background-color",color);
+    
+    
+    }
+    }
+    
+    ringsColor()
 $('.secOne').on('click',event=>{
     var classY = $(event.target).attr('class')
     if(classY!='pole'&&classY!="flag"&&classY!='list'&&classY!="listItem"){
@@ -221,6 +224,7 @@ $('.rollButton').on('click',event=>{
             $('.secThree').addClass('rollolol');
             setTimeout(() => {
                 $('.secFour').addClass('rollolol');
+                ringsColor()
                 setTimeout(() => {
                     $('.section').removeClass('rollolol');
                     
